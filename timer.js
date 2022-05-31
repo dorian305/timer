@@ -10,14 +10,14 @@ export class Timer {
     // Pausing the timer
     pause() {
         this.pausedTime = new Date();
-        clearTimeout(this.timerId);
+        this.destroy();
         this.remainingTime = this.remainingTime - (this.pausedTime - this.startedTime);
     }
 
     // Resuming the timer
     resume() {
         this.startedTime = new Date();
-        clearTimeout(this.timerId);
+        this.destroy();
         this.timerId = setTimeout(() => this.callback(), this.remainingTime);
     }
 
