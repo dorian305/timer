@@ -1,10 +1,13 @@
 export class Timer {
-    constructor(callback, delay) {
+    constructor(callback, delay, autostart = false) {
         this.callback = callback;     // Function that will execute when the timer expires
         this.remainingTime = delay;   // Time until the timer expires, in milliseconds
         this.startedTime = 0;         // Date when the timer was started, in milliseconds
         this.pausedTime = 0;          // Date when the timer was paused, in milliseconds
         this.timerId = 0;             // The ID of the timer
+        
+        // Automatically start timer upon instantiation
+        if (autostart) this.start();
     }
 
     // Pausing the timer
