@@ -1,4 +1,4 @@
-# JavaScript Timer class
+# Timer
 - timer functionality written in JavaScript
 - extends window's setTimeout method with pause and resume methods for easier state management
 ## How to use 
