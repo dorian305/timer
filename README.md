@@ -1,6 +1,6 @@
 # JavaScript Timer class
 - timer functionality written in JavaScript
-- expands window's built in setTimeout functionality with additional methods such as pausing and resuming
+- extends window's setTimeout method with pause and resume methods for easier state management
 ## How to use 
 - instantiate new instance of Timer
 - pass the function to execute on expiration as first argument
